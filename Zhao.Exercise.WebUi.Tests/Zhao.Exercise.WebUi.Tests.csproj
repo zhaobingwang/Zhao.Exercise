@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CCD5ABD5-352E-4266-A305-C269A4227C90}</ProjectGuid>
+    <ProjectGuid>{C4D6B2E0-A225-48E3-A1B4-1FE31120FC96}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Zhao.Exercise.WebUi.Tests</RootNamespace>
@@ -53,7 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Zhao.Exercise.WebUi\Zhao.Exercise.WebUi.csproj">
-      <Project>{76E66109-D3DD-44E3-A8EC-AADB11AB9AA0}</Project>
+      <Project>{863BC1A1-0CC8-4A9E-837F-0A5CD80F54E0}</Project>
       <Name>Zhao.Exercise.WebUi</Name>
     </ProjectReference>
   </ItemGroup>
