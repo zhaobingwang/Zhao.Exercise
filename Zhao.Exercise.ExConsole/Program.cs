@@ -18,6 +18,10 @@ namespace Zhao.Exercise.ExConsole
             Person p = new Person("Jack",24,'男');
             Console.WriteLine(p.SayHi());
             Console.ReadKey();
+            Console.WriteLine("-------------------------------------------------------");
+            Ticket ticket = new Ticket(150);
+            ticket.ShowTicketPrice();
+            Console.WriteLine("-------------------------------------------------------");
         }
     }
     class ZhaoEx
