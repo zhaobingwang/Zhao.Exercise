@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.WebUi", "Zhao
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.WebUi.Tests", "Zhao.Exercise.WebUi.Tests\Zhao.Exercise.WebUi.Tests.csproj", "{C4D6B2E0-A225-48E3-A1B4-1FE31120FC96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.ExConsole", "Zhao.Exercise.ExConsole\Zhao.Exercise.ExConsole.csproj", "{37D3EB61-B510-4F4D-B96E-7864B174B6A6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{C4D6B2E0-A225-48E3-A1B4-1FE31120FC96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4D6B2E0-A225-48E3-A1B4-1FE31120FC96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4D6B2E0-A225-48E3-A1B4-1FE31120FC96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37D3EB61-B510-4F4D-B96E-7864B174B6A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37D3EB61-B510-4F4D-B96E-7864B174B6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37D3EB61-B510-4F4D-B96E-7864B174B6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37D3EB61-B510-4F4D-B96E-7864B174B6A6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
