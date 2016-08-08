@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        /*div#maincontent div.panel, p.flip {
+            width: 400px;
+            margin: 0;
+            padding: 5px;
+            text-align: center;
+            background: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }*/
+        div.panel, p.flip {
+            width: 400px;
+            margin: 0;
+            padding: 5px;
+            text-align: center;
+            background: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+    </style>
+    <script language="JavaScript" type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        //1.当CDN上的jQuery文件不可用时，该怎么办？
+        //为了节省带宽和脚本引用的稳定性，我们会使用CDN上的jQuery文件，例如baidu的jquery cdn服务。但是如果这些CDN上的jQuery服务不可用，我们还可以通过以下代码来切换到本地服务器的jQuery版本：
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='../js/jquery-2.1.4.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+
+
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+            //更改界面上的[所有]文本框的背景色
+            $("#btnChangeColor").click(function () {
+                $(":text.text2").css('background', 'green');
+            });
+            $("#btnChangeColor2").click(function () {
+                $("input[type='text']").css('background', 'green');
+            });
+
+            $(".flip").click(function () {
+                $(".panel").toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>This is a heading</h2>
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+    <input type="text" value="" id="text1" name="text1" />
+    <input type="text" value="" id="text2" name="text2" class="text2" />
+
+    <pre>button type=\"button\"</pre>
+    <button type="button">Click me</button>
+    <button type="button">Click me</button>
+
+    <pre>input type=\"button\"</pre>
+    <input type="button" value="click me" />
+    <br />
+    <input type="button" id="btnChangeColor" value="改变文本框背景色" />
+    <input type="button" id="btnChangeColor2" value="改变文本框背景色" />
+
+    <br />
+
+    <p class="flip">点击这里，隐藏/显示面板</p>
+    <div class="panel" style="display:none">
+        this is main content
+    </div>
+</body>
+</html>

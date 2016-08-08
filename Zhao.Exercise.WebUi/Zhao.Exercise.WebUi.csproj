@@ -121,7 +121,13 @@
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Temp\images\001.jpg" />
+    <Content Include="Temp\jQueryPractice\JQ.html" />
+    <Content Include="Temp\jQueryPractice\jQuery 实例.html" />
+    <Content Include="Temp\js\jquery-2.1.4.js" />
+    <Content Include="Temp\js\jquery-2.1.4.min.js" />
     <Content Include="Temp\ObjectAndArray.html" />
+    <Content Include="Temp\test.txt" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
