@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script type="text/javascript">
+        var obj_a = new Object();
+        obj_a["a"] = "aaaaaa";
+        obj_a["b"] = "bbbbbb";
+        document.writeln("obj_a是" + obj_a+"<br />");
+        document.writeln("obj_b[\"a\"]是" + obj_a["a"] + "<br />");
+
+        var obj_b = {};
+        obj_b["a"] = "aaa";
+        obj_b["b"] = "bbb";
+        document.writeln("obj_b[\"a\"]是" + obj_b["a"] + "<br />");
+
+        var obj_c = eval("({'c':'ccc','d':'ddd'})");
+        document.writeln("obj_c[\"c\"]是" + obj_c["c"] + "<br />");
+
+        var arr_1 = new Array();
+        arr_1.push("111");
+        arr_1.push("222");
+        document.writeln("arr_1是" + arr_1 + "<br />");
+        document.writeln("arr_1[1]是" + arr_1[1] + "<br />");
+
+        var arr_2 = [];
+        arr_2.push("333");
+        arr_2.push("444");
+        document.writeln("arr_2是" + arr_2 + "<br />");
+        document.writeln("arr_2[1]是" + arr_2[1] + "<br />");
+    </script>
+</body>
+</html>

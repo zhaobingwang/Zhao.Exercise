@@ -117,14 +117,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Temp\Ex.html" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Temp\ObjectAndArray.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\CSharpBasisEx\CSharpBasisExAreaRegistration.cs" />
+    <Compile Include="Areas\HTML\HTMLAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -137,6 +140,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Areas\CSharpBasisEx\Views\web.config" />
+    <Content Include="Areas\HTML\Views\web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -149,6 +153,9 @@
     <Folder Include="Areas\CSharpBasisEx\Controllers\" />
     <Folder Include="Areas\CSharpBasisEx\Models\" />
     <Folder Include="Areas\CSharpBasisEx\Views\Shared\" />
+    <Folder Include="Areas\HTML\Controllers\" />
+    <Folder Include="Areas\HTML\Models\" />
+    <Folder Include="Areas\HTML\Views\Shared\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
