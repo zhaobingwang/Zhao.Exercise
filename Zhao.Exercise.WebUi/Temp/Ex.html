@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        //1、字符串操作(String)
+        var str = "zh-CN中国.mp3";
+        var ex = str.substring(str.lastIndexOf('.'));
+        document.write("取扩展名: "+ex + "<br />");
+        
+        //2、数组操作(Array)
+        var arr = new Array();
+        //var arr = new Array(1, 4.5, "Hi");
+        //var arr = new Array(new Array(), new Array(), new Array());
+        for (var i = 0; i < 10; i++) {
+            arr[i] = i;
+        }
+        document.write("join(): "+arr.join("_")+"<br />");
+        document.write("reverse(): " + arr.reverse().join("_")+"<br />");
+
+        //升序排列数组
+        function sortMethodAsc(a, b) {
+            return a - b;
+        }
+        //降序
+        function sortMethodDesc(a, b) {
+            return b - a;
+        }
+        document.write("sotr(): " + arr.sort(sortMethodAsc).join("_") + "<br />");
+
+        //3、数学对象（Math）
+        
+
+        //4、日期对象 (Date) 取网上搜集js日期相关的封装好的js即可
+
+        //5、全局对象
+
+
+        //
+
+        document.writeln(window.history);
+
+
+
+        //some function
+
+        //请编写一个JavaScript函数 parseQueryString，它的用途是把URL参数解析为一个对象，
+        //如： var url = “http://witmax.cn/index.php?key0=0&key1=1&key2=2″
+        function parseQueryString(url) {
+            var obj = {};
+            var a = url.split('?');
+            alert(a==1);
+        }
+        parseQueryString('http://witmax.cn/index.php?key0=0&key1=1&key2=2');
+
+    </script>
+</head>
+<body style="">
+
+</body>
+</html>
