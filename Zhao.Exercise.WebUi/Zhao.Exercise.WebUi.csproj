@@ -143,6 +143,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\CSharpBasisEx\CSharpBasisExAreaRegistration.cs" />
     <Compile Include="Areas\HTML\HTMLAreaRegistration.cs" />
+    <Compile Include="Controllers\UserInfoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -156,6 +157,7 @@
     </Content>
     <Content Include="Areas\CSharpBasisEx\Views\web.config" />
     <Content Include="Areas\HTML\Views\web.config" />
+    <Content Include="Views\UserInfo\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -171,8 +173,17 @@
     <Folder Include="Areas\HTML\Controllers\" />
     <Folder Include="Areas\HTML\Models\" />
     <Folder Include="Areas\HTML\Views\Shared\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zhao.Exercise.BLL\Zhao.Exercise.BLL.csproj">
+      <Project>{3c8889bf-c81f-439b-a54f-5c19bdbe90cd}</Project>
+      <Name>Zhao.Exercise.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zhao.Exercise.Model\Zhao.Exercise.Model.csproj">
+      <Project>{465587b5-6764-4c4d-b211-4cdc7c2e7277}</Project>
+      <Name>Zhao.Exercise.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

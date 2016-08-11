@@ -41,6 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserInfoDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Zhao.Exercise.DBUtility\Zhao.Exercise.DBUtility.csproj">
+      <Project>{c93a2a6b-9817-4225-979e-f98e960d5e00}</Project>
+      <Name>Zhao.Exercise.DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Zhao.Exercise.Model\Zhao.Exercise.Model.csproj">
+      <Project>{465587b5-6764-4c4d-b211-4cdc7c2e7277}</Project>
+      <Name>Zhao.Exercise.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
