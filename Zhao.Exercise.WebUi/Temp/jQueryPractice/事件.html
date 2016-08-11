@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='../js/jquery-2.1.4.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+</head>
+<body>
+
+    <script>
+
+        function check(e) {
+            var capsLockKey = e.keyCode ? e.keyCode : e.which;
+            var shifKey = e.shiftKey ? e.shiftKey : ((capsLockKey == 16) ? true : false);
+            if (((capsLockKey >= 65 && capsLockKey <= 90) && !shifKey) || ((capsLockKey >= 97 && capsLockKey <= 122) && shifKey)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $(function () {
+            alert(check());
+            $(":text").keydown(function (event) {
+                if (event.which == 13) {
+                    alert("按下了回车");
+                }
+            });
+        });
+    </script>
+    <input type="text" />
+</body>
+</html>

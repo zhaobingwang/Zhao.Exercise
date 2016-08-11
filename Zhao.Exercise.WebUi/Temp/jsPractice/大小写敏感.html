@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='../js/jquery-2.1.4.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    <script src="../js/JqEx.js"></script>
+    <script>
+        $(function () {
+            $("#pwd").capsLockTip();
+        });
+    </script>
+</head>
+<body>
+    <input class="text" id="pwd" type="password" />
+    <div id="capital" style="display:none;">大写锁定已开启</div>
+</body>
+</html>

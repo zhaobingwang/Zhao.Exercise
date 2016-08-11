@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script language="JavaScript" type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        if (typeof jQuery == 'undefined') {
+            document.write(unescape("%3Cscript src='../js/jquery-2.1.4.js' type='text/javascript'%3E%3C/script%3E"));
+        }
+    </script>
+    <script>
+        $(function () {
+            $("#btn1").click(function () {
+                $(this).hide();
+            });
+            $("#btn2").click(function () {
+                $('p').hide();
+            });
+            $("#btn3").click(function () {
+                $('.test').hide();
+            });
+            $("#btn4").click(function () {
+                $("#test").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>This is a heading</h2>
+    <p class="test">This is a paragraph.class="test"</p>
+    <p id="test">This is another paragraph.id="test"</p>
+    <hr />
+    <input type="button" id="btn1" value="$(this).hide()" />
+    <input type="button" id="btn2" value='$("p").hide()' />
+    <input type="button" id="btn3" value='$(".test").hide()' />
+    <input type="button" id="btn4" value='$("#test").hide()' />
+</body>
+</html>

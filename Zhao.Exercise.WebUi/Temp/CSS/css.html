@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="" />
+    <style>
+        div {
+        }
+
+        .floatLeft {
+            width: 100px;
+            height: 100px;
+            border-style: solid;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .floatRight {
+            width: 500px;
+            height: 100px;
+            border-style: solid;
+            float: right;
+            margin-right: 20xp;
+        }
+        #longTextTest li {
+            /*省略号*/
+            text-overflow:ellipsis;
+            overflow:hidden;
+            white-space:nowrap;
+            width:300px;
+            height:24px;
+            font-size:24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="floatLeft">
+        111
+        <div style="border:solid 1px red;width:50px;height:50px;padding-left:5px;margin-left:20px;">222</div>
+    </div>
+    <div class="floatLeft">333</div>
+    <div class="floatRight">
+        444
+        <ul id="longTextTest">
+            <li ellipsis>这是一段测试文本，用于测试文本过长时是否显示省略号！</li>
+            <li ellipsis>这是一段测试文本，用于测试文本过长时是否显示省略号！</li>
+            <li ellipsis>这是一段测试文本，用于测试文本过长时是否显示省略号！</li>
+        </ul>
+    </div>
+</body>
+</html>

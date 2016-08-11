@@ -36,7 +36,25 @@
 
 
     <script type="text/javascript">
+        $(function () {
+
+        });
         $(document).ready(function () {
+            //请使用jQuery将页面上的所有元素边框设置为2px宽的虚线？
+            //$("*").css("border", "2px dotted red");
+
+            //如何用jQuery禁用浏览器的前进后退按钮？
+            //window.history.forward(1);
+            //OR
+            //window.history.forward(-1);
+
+            //问题：怎样用jQuery编码和解码URL？
+            //var url = "https://www.baidu.com/s?wd=jquery&rsv_spt=1&rsv_n=1";
+            //var encodeUrl = encodeURIComponent(url);
+            //var decodeUrl = decodeURIComponent(encodeUrl);
+            //alert(encodeUrl);
+            //alert(decodeUrl);
+
             $("button").click(function () {
                 $("p").hide();
             });
