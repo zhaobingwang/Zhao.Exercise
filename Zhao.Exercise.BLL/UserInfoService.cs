@@ -20,5 +20,9 @@ namespace Zhao.Exercise.BLL
             List<Model.UserInfo> list = dal.GetList();
             return list;
         }
+        public int Update(Model.UserInfo userinfo)
+        {
+            return dal.Update(userinfo);
+        }
     }
 }

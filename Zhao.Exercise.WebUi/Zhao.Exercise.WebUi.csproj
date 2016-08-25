@@ -117,6 +117,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\jqGrid\ui.jqgrid-bootstrap-ui.css" />
+    <Content Include="Content\jqGrid\ui.jqgrid-bootstrap.css" />
+    <Content Include="Content\jqGrid\ui.jqgrid.css" />
+    <Content Include="scripts\jqGrid\jquery-1.11.0.min.js" />
+    <Content Include="scripts\jqGrid\jquery.jqGrid.min.js" />
     <Content Include="Temp\CSS\css.html" />
     <Content Include="Temp\Ex.html" />
     <Content Include="Global.asax" />
@@ -174,6 +179,7 @@
     <Folder Include="Areas\HTML\Models\" />
     <Folder Include="Areas\HTML\Views\Shared\" />
     <Folder Include="Models\" />
+    <Folder Include="tempScript\jquery-ui-1.12.0.custom\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Zhao.Exercise.BLL\Zhao.Exercise.BLL.csproj">

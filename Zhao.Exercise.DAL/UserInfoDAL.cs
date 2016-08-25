@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +11,10 @@ namespace Zhao.Exercise.DAL
 {
     public partial class UserInfoDAL
     {
+        /// <summary>
+        /// 获取所有用户信息
+        /// </summary>
+        /// <returns></returns>
         public List<Model.UserInfo> GetList()
         {
             string sql = "select * from UserInfo";
@@ -29,6 +34,18 @@ namespace Zhao.Exercise.DAL
                 });
             }
             return list;
+        }
+        public int Update(Model.UserInfo userinfo)
+        {
+            string sql = "update userinfo set UserName=@UserName,UserPwd=@UserPwd,UserAge=@UserAge,UpdateTime=@UpdateTime where UserId=@UserId";
+            SqlParameter[] ps = new SqlParameter[] {
+                new SqlParameter("@UserId",userinfo.UserId),
+                new SqlParameter("@UserName",userinfo.UserName),
+                new SqlParameter("@UserPwd",userinfo.UserPwd),
+                new SqlParameter("@UserAge",userinfo.UserAge),
+                new SqlParameter("@UpdateTime",userinfo.UpdateTime)
+            };
+            return SQLHelper.ExecuteNonQuery(sql, ps);
         }
     }
 }
