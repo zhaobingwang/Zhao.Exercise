@@ -1,0 +1,33 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script src="~/scripts/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <div>
+        <input type="button" value="创建XML文档" id="createXML" />
+    </div>
+</body>
+</html>
+<script type="text/javascript">
+    $(function () {
+        $("#createXML").click(function () {
+            $.ajax({
+                url: "../Xml/CreateXML",
+                type: "POST",
+                data: {},
+                success: function (data) {
+                    alert(data.Result+"_"+data.Status);
+                }
+            });
+        });
+    });
+</script>
