@@ -11,16 +11,22 @@
     <title>Index</title>
 @*    <link href="~/content/jqgrid/ui.jqgrid.css" rel="stylesheet" />*@
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" />
     <link href="~/Content/jqGrid/ui.jqgrid-bootstrap.css" rel="stylesheet" />
     <link href="~/Content/jqGrid/ui.jqgrid-bootstrap-ui.css" rel="stylesheet" />
     <script src="~/scripts/jqGrid/jquery-1.11.0.min.js"></script>
+    <script src="~/scripts/jquery-ui.min.js"></script>
     <script src="~/scripts/jqGrid/jquery.jqGrid.min.js"></script>
 </head>
 <body>
     <div>
         <table id="list2"></table>
         <div id="pager2"></div>
-        <a href="javascript:void(0);" id="update">Update</a>
+        <a href="javascript:void(0);" id="edit">Edit</a>
+        <div id="editDiv">
+            <iframe frameborder="0" scrolling="no" width="100%" height="100%" id="editFrame"></iframe>
+
+        </div>
         <script>
 
         </script>
@@ -76,12 +82,13 @@
             function pageInit() {
                 jQuery("#list2").jqGrid(
                     {
-                        url: '/UserInfo/List',
+                        url: '../UserInfo/List',
                         datatype: "json",
                         autowidth: true,
                         styleUI: 'Bootstrap',
                         multiselect:true,
                         //muitibixonly:true,
+                        cellEdit:true,
                         colNames: ['UserId', 'UserName', 'UserPwd', 'UserAge', 'DelFlag', 'CreateTime', 'UpdateTime'],
                         colModel: [
                                      { name: 'UserId', index: 'UserId', width: 55 },
@@ -106,13 +113,24 @@
                 jQuery("#list2").jqGrid('navGrid', '#pager2', { edit: false, add: false, del: false });
             }
 
-            $("#update").click(function () {
+            $("#edit").click(function () {
+                
                 var ids = $('#list2').jqGrid('getGridParam', 'selarrrow');
                 var id = $("#list2").jqGrid('getGridParam', 'selrow');
                 var rowDatas = $("#list2").jqGrid('getRowData', id);
                 var row = rowDatas["UserName"];
-                $.post("/UserInfo/Edit?t=" + new Date(), {row:rowDatas}, function (result) {
-                    alert(result);
+                $("#editFrame").attr("src", "../UserInfo/Details/?type=show&id=" + id);
+                $("#editFrame").dialog({
+                    autoOpen: false, // 是否自动弹出窗口
+                    modal: true, // 设置为模态对话框
+                    resizable: true,
+                    width: 500,
+                    height: 300,
+                    position: "center" // 窗口显示的位置
+                });
+                $("#editFrame").dialog("open");
+                $.post("../UserInfo/Details?t=" + new Date(), { row: rowDatas, type: 'show' }, function (result) {
+                    //alert(result);
                 });
             });
         </script>

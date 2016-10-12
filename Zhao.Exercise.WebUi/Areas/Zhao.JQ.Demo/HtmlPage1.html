@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="../../scripts/jquery-2.1.4.js"></script>
+    <script src="../../scripts/Zhao.JQ.js"></script>
+</head>
+<body>
+    <input type="text" class="setLength" value="0123456789" />
+    <input type="button" value="截取" onclick="setLength()" />
+    <span class="setLength">0123456789</span>
+    <script>
+        function setLength() {
+            $.ZhaoJq.setLength($(".setLength"), 5);
+        }
+    </script>
+</body>
+</html>

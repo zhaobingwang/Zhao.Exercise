@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="../../../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../../scripts/jquery-2.1.4.js"></script>
+    <style type="text/css">
+        .main {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>URL</h1>
+        <textarea class="form-control" rows="3" id="url1"></textarea>
+        <br />
+        <button type="button" class="btn btn-primary" id="encodeURI">encodeURI</button>
+        <button type="button" class="btn btn-primary" id="decodeURI">decodeURI</button>
+        <br />
+        <br />
+        <h1>URL2</h1>
+        <textarea class="form-control" rows="3" id="url2"></textarea>
+    </div>
+    <script>
+        $(function () {
+            $("#encodeURI").click(function () {
+                $("#url2").val(encodeURI($("#url1").val()));
+            });
+            $("#decodeURI").click(function () {
+                $("#url2").val(decodeURI($("#url1").val()));
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/jqGrid/ui.jqgrid-bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/jqGrid/ui.jqgrid-bootstrap-ui.css" rel="stylesheet" />
+    <script src="~/scripts/jqGrid/jquery-1.11.0.min.js"></script>
+    <script src="~/scripts/jqGrid/jquery.jqGrid.min.js"></script>
+</head>
+<body>
+    <div> 
+        <table id="list2"></table>
+        <div id="pager2"></div>
+        @*<a href="javascript:void(0);" id="edit">Save</a>*@
+        <button id="edit">Save</button>
+    </div>
+    <script>
+        function pageInit() {
+            jQuery("#list2").jqGrid(
+                {
+                    url: '../UserInfo/List',
+                    datatype: "json",
+                    autowidth: true,
+                    styleUI: 'Bootstrap',
+                    multiselect: true,
+                    //muitibixonly:true,
+                    cellEdit: true,
+                    colNames: ['UserId', 'UserName', 'UserPwd', 'UserAge', 'DelFlag', 'CreateTime', 'UpdateTime'],
+                    colModel: [
+                                 { name: 'UserId', index: 'UserId', width: 55 },
+                                 { name: 'UserName', index: 'UserName', width: 90 },
+                                 { name: 'UserPwd', index: 'UserPwd', width: 100 },
+                                 { name: 'UserAge', index: 'UserAge', width: 80, align: "right" },
+                                 { name: 'DelFlag', index: 'DelFlag', width: 80, align: "center", formatter: 'select', editoptions: { value: "0:已删除;1:正常" } },
+                                 {
+                                     name: 'CreateTime', index: 'CreateTime', width: 150, align: "center", formatter: currencyFmatter
+                                 },
+                                 { name: 'UpdateTime', index: 'UpdateTime', width: 150, align: "center", formatter: currencyFmatter }
+                    ],
+                    rowNum: 10,
+                    rowList: [10, 20, 30],
+                    //pager: '#pager2',
+                    sortname: 'UserId',
+                    mtype: "post",
+                    viewrecords: true,
+                    sortorder: "desc",
+                    caption: "JSON 实例"
+                });
+            jQuery("#list2").jqGrid('navGrid', '#pager2', { edit: false, add: false, del: false });
+        }
+    </script>
+</body>
+</html>

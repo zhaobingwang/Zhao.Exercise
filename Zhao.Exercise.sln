@@ -19,6 +19,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.WebUi.Tests",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.ExConsole", "Zhao.Exercise.ExConsole\Zhao.Exercise.ExConsole.csproj", "{37D3EB61-B510-4F4D-B96E-7864B174B6A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.WindowsForms", "Zhao.Exercise.WindowsForms\Zhao.Exercise.WindowsForms.csproj", "{B70368BA-7D6F-4071-AFFC-86A5816738FD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleApp", "ConsoleApp", "{F1F964DD-8DAA-4029-83FE-7D86DB5494D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,8 +61,15 @@ Global
 		{37D3EB61-B510-4F4D-B96E-7864B174B6A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{37D3EB61-B510-4F4D-B96E-7864B174B6A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{37D3EB61-B510-4F4D-B96E-7864B174B6A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B70368BA-7D6F-4071-AFFC-86A5816738FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B70368BA-7D6F-4071-AFFC-86A5816738FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B70368BA-7D6F-4071-AFFC-86A5816738FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B70368BA-7D6F-4071-AFFC-86A5816738FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{37D3EB61-B510-4F4D-B96E-7864B174B6A6} = {F1F964DD-8DAA-4029-83FE-7D86DB5494D9}
 	EndGlobalSection
 EndGlobal
