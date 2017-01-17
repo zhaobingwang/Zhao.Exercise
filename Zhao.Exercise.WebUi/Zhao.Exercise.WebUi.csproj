@@ -168,9 +168,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="Areas\CSharpBasisEx\Views\web.config" />
     <Content Include="Areas\HTML\Views\web.config" />
     <Content Include="Views\UserInfo\Index.cshtml" />
