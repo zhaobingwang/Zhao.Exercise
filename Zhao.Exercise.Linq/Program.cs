@@ -17,6 +17,8 @@ namespace Zhao.Exercise.Linq
             //Console.WriteLine(TypeConverter.ChangeString(a));
 
             LinqQuery();
+            string s = "Z";
+            s.Foo();
         }
         static void LinqQuery()
         {
@@ -50,5 +52,11 @@ namespace Zhao.Exercise.Linq
         }
     }
 
-    
+    public static class StringExtension
+    {
+        public static void Foo(this string s)
+        {
+            Console.WriteLine("Foo invoked for {0}",s);
+        }
+    }
 }
