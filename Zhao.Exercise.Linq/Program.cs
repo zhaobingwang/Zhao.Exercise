@@ -28,7 +28,7 @@ namespace Zhao.Exercise.Linq
                         select r;
             foreach (Racer r in query)
             {
-                Console.WriteLine("{0}",r.ToString("A"));
+                Console.WriteLine("{0}", r.ToString("A"));
             }
         }
     }
@@ -56,7 +56,20 @@ namespace Zhao.Exercise.Linq
     {
         public static void Foo(this string s)
         {
-            Console.WriteLine("Foo invoked for {0}",s);
+            Console.WriteLine("Foo invoked for {0}", s);
         }
     }
+
+    public class TempDemo
+    {
+        public int Add(int a, int b)
+        {
+            return a + b;
+        }
+        public int Divide(int a, int b)
+        {
+            return a / b;
+        }
+    }
+
 }
