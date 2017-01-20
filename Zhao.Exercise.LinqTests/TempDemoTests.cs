@@ -20,7 +20,7 @@ namespace Zhao.Exercise.Linq.Tests
         [TestMethod()]
         public void DivideTest()
         {
-            TempDemo tempDemp = new TempDemo();
+            TempDemo tempDemo = new TempDemo();
             int a = -1;
             //int aInit = a;
             int b = -1;
@@ -30,7 +30,7 @@ namespace Zhao.Exercise.Linq.Tests
             {
                 for (int j = 0; j < count; j++)
                 {
-                    tempDemp.Divide(a, b);
+                    tempDemo.Divide(a, b);
                     b++;
                     if (b==(bInit+count))
                     {
