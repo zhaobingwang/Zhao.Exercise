@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.Linq", "Zhao.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.LinqTests", "Zhao.Exercise.LinqTests\Zhao.Exercise.LinqTests.csproj", "{44A6359C-E21E-47D7-BCA8-BA45246416C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zhao.Exercise.Algorithm", "Zhao.Exercise.Algorithm\Zhao.Exercise.Algorithm.csproj", "{83DAA0E5-2BD4-46A3-B600-57CB1B2B0BD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{44A6359C-E21E-47D7-BCA8-BA45246416C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44A6359C-E21E-47D7-BCA8-BA45246416C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44A6359C-E21E-47D7-BCA8-BA45246416C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83DAA0E5-2BD4-46A3-B600-57CB1B2B0BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83DAA0E5-2BD4-46A3-B600-57CB1B2B0BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83DAA0E5-2BD4-46A3-B600-57CB1B2B0BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83DAA0E5-2BD4-46A3-B600-57CB1B2B0BD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,5 +90,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{37D3EB61-B510-4F4D-B96E-7864B174B6A6} = {F1F964DD-8DAA-4029-83FE-7D86DB5494D9}
 		{6EB1F26A-49AC-49BD-8142-C24BCB1B057F} = {F1F964DD-8DAA-4029-83FE-7D86DB5494D9}
+		{83DAA0E5-2BD4-46A3-B600-57CB1B2B0BD2} = {F1F964DD-8DAA-4029-83FE-7D86DB5494D9}
 	EndGlobalSection
 EndGlobal
