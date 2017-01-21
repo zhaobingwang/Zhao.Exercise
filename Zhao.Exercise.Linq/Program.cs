@@ -11,14 +11,15 @@ namespace Zhao.Exercise.Linq
     {
         static void Main(string[] args)
         {
-            //LinqDemo linqDemo = new LinqDemo();
+            LinqDemo linqDemo = new LinqDemo();
             //linqDemo.BaseQueryDemo();
             //string a = null;
             //Console.WriteLine(TypeConverter.ChangeString(a));
 
-            LinqQuery();
-            string s = "Z";
-            s.Foo();
+            //LinqQuery();
+            //string s = "Z";
+            //s.Foo();
+            linqDemo.DelayedQuery();
         }
         static void LinqQuery()
         {
@@ -34,6 +35,7 @@ namespace Zhao.Exercise.Linq
     }
     class LinqDemo
     {
+        #region MyRegion
         public void BaseQueryDemo()
         {
             //Specify the data source.
@@ -49,7 +51,33 @@ namespace Zhao.Exercise.Linq
             {
                 Console.WriteLine(i + " ");
             }
+        } 
+        #endregion
+
+        #region 推迟查询的执行
+        public void DelayedQuery()
+        {
+            var names = new List<string> { "Jack", "Nick", "Spartan" };
+            var nameWithS = (from name in names
+                             where name.StartsWith("S")
+                             orderby name
+                             select name);
+            Console.WriteLine("First Demo:");
+            foreach (string name in nameWithS)
+            {
+                Console.WriteLine(name);
+            }
+            Console.WriteLine();
+            names.Add("John");
+            names.Add("Jim");
+            names.Add("Steven");
+            Console.WriteLine("Second Demo:");
+            foreach (string name in nameWithS)
+            {
+                Console.WriteLine(name);
+            }
         }
+        #endregion
     }
 
     public static class StringExtension
