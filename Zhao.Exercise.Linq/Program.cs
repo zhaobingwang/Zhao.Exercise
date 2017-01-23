@@ -20,6 +20,7 @@ namespace Zhao.Exercise.Linq
             //string s = "Z";
             //s.Foo();
             linqDemo.DelayedQuery();
+            linqDemo.AvoidDelayedQuery();
         }
         static void LinqQuery()
         {
@@ -55,6 +56,9 @@ namespace Zhao.Exercise.Linq
         #endregion
 
         #region 推迟查询的执行
+        /// <summary>
+        /// 延迟查询
+        /// </summary>
         public void DelayedQuery()
         {
             var names = new List<string> { "Jack", "Nick", "Spartan" };
@@ -65,7 +69,7 @@ namespace Zhao.Exercise.Linq
             Console.WriteLine("First Demo:");
             foreach (string name in nameWithS)
             {
-                Console.WriteLine(name);
+                Console.WriteLine(name);//Result:Spartan
             }
             Console.WriteLine();
             names.Add("John");
@@ -74,8 +78,41 @@ namespace Zhao.Exercise.Linq
             Console.WriteLine("Second Demo:");
             foreach (string name in nameWithS)
             {
-                Console.WriteLine(name);
+                Console.WriteLine(name);//Result:Spartan,Steven
             }
+            /*
+             *由这俩个不同结果可见只有在枚举nameWithS的时候才会真正的执行查询操作。
+             * 如果没有延迟查询, 两次输出的结果应该是相同的。
+             */
+        }
+        /// <summary>
+        /// 避免延迟查询
+        /// </summary>
+        public void AvoidDelayedQuery()
+        {
+            var names = new List<string> { "Jack", "Nick", "Spartan" };
+            var nameWithS = (from name in names
+                             where name.StartsWith("S")
+                             orderby name
+                             select name).ToList();
+            Console.WriteLine("First Demo:");
+            foreach (string name in nameWithS)
+            {
+                Console.WriteLine(name);//Result:Spartan
+            }
+            Console.WriteLine();
+            names.Add("John");
+            names.Add("Jim");
+            names.Add("Steven");
+            Console.WriteLine("Second Demo:");
+            foreach (string name in nameWithS)
+            {
+                Console.WriteLine(name);//Result:Spartan,Steven
+            }
+            /*
+             *可以使用一个不返回IEnumerable<T>数据类型的转换操作符, 
+             * 如ToArray, ToList, ToDictionary或ToLookup
+             */
         }
         #endregion
     }
