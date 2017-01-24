@@ -115,6 +115,13 @@ namespace Zhao.Exercise.Linq
              */
         }
         #endregion
+
+        #region 标准的查询操作符
+        public void QueryOperator()
+        {
+
+        }
+        #endregion
     }
 
     public static class StringExtension
