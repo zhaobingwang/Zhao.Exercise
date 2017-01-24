@@ -152,7 +152,7 @@ namespace Zhao.Exercise.Linq
                 Console.WriteLine("操作符：SelectMany-cross join");
                 foreach (var item in query_selectMany)
                 {
-                    Console.WriteLine("{0}-{1}-{2}", item.PostId, item.Title, item.Content,item.BlogId);
+                    Console.WriteLine("{0}-{1}-{2}", item.PostId, item.Title, item.Content, item.BlogId);
                 }
                 #endregion
 
@@ -167,6 +167,16 @@ namespace Zhao.Exercise.Linq
                 }
                 #endregion
 
+                #region SelectMany-left out join
+                Console.WriteLine("操作符：SelectMany-left out join");
+                var query_selectMany_leftOutJoin = from b in db.Blogs
+                                                   from p in b.Posts.DefaultIfEmpty()
+                                                   select new { b.Name, p.Title, p.Content };
+                foreach (var item in query_selectMany_leftOutJoin)
+                {
+                    Console.WriteLine("{0}-{1}-{2}", item.Title, item.Content, item.Name);
+                }
+                #endregion
             }
         }
         #endregion
