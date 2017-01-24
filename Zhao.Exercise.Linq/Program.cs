@@ -19,8 +19,12 @@ namespace Zhao.Exercise.Linq
             //LinqQuery();
             //string s = "Z";
             //s.Foo();
-            linqDemo.DelayedQuery();
-            linqDemo.AvoidDelayedQuery();
+            //linqDemo.DelayedQuery();
+            //linqDemo.AvoidDelayedQuery();
+
+            #region 标准的查询操作符
+            linqDemo.QueryOperator();
+            #endregion
         }
         static void LinqQuery()
         {
@@ -52,7 +56,7 @@ namespace Zhao.Exercise.Linq
             {
                 Console.WriteLine(i + " ");
             }
-        } 
+        }
         #endregion
 
         #region 推迟查询的执行
@@ -119,7 +123,51 @@ namespace Zhao.Exercise.Linq
         #region 标准的查询操作符
         public void QueryOperator()
         {
+            using (var db = new Entities())
+            {
 
+                #region 数据源
+                var queryBlogs = from b in db.Blogs
+                                 select b;
+                var queryPosts = from p in db.Posts
+                                 select p;
+                Console.WriteLine("数据源Blogs：");
+                foreach (var item in queryBlogs)
+                {
+                    Console.WriteLine("{0}-{1}-{2}", item.BlogId, item.Name, item.Url);
+                }
+                Console.WriteLine("数据源Posts：");
+                foreach (var item in queryPosts)
+                {
+                    Console.WriteLine("{0}-{1}-{2}-{3}", item.PostId, item.Title, item.Content, item.BlogId);
+                }
+                #endregion
+
+                Console.WriteLine(Environment.NewLine);
+
+                #region SelectMany-cross join,结果集是所有表的迪卡尔积
+                var query_selectMany = from b in db.Blogs
+                                       from p in db.Posts
+                                       select p;
+                Console.WriteLine("操作符：SelectMany-cross join");
+                foreach (var item in query_selectMany)
+                {
+                    Console.WriteLine("{0}-{1}-{2}", item.PostId, item.Title, item.Content,item.BlogId);
+                }
+                #endregion
+
+                #region SelectMany-inner join
+                Console.WriteLine("操作符：SelectMany-inner join");
+                var query_selectMany_innerJoin = from b in db.Blogs
+                                                 from p in b.Posts
+                                                 select p;
+                foreach (var item in query_selectMany_innerJoin)
+                {
+                    Console.WriteLine("{0}-{1}-{2}", item.PostId, item.Title, item.Content, item.BlogId);
+                }
+                #endregion
+
+            }
         }
         #endregion
     }
