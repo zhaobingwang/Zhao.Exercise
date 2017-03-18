@@ -131,6 +131,7 @@ namespace Zhao.Exercise.Linq
                                  select b;
                 var queryPosts = from p in db.Posts
                                  select p;
+                //queryBlogs.Reverse();
                 Console.WriteLine("数据源Blogs：");
                 foreach (var item in queryBlogs)
                 {
@@ -175,6 +176,57 @@ namespace Zhao.Exercise.Linq
                 foreach (var item in query_selectMany_leftOutJoin)
                 {
                     Console.WriteLine("{0}-{1}-{2}", item.Title, item.Content, item.Name);
+                }
+                #endregion
+
+                #region Join
+                var queryJoin = from p in db.Posts
+                                join b in db.Blogs on p.BlogId equals b.BlogId
+                                where b.BlogId == 1
+                                select p;
+                var queryJoin2 = db.Posts.Join(db.Blogs, p => p.BlogId, b => b.BlogId, (p, b) => p).Where(p => p.BlogId == 1);
+                Console.WriteLine(Environment.NewLine + "操作符Join:");
+                foreach (var item in queryJoin2)
+                {
+                    Console.WriteLine("{0}-{1}-{2}", item.Title, item.Content, item.Blogs.Name);
+                }
+
+                #endregion
+
+                #region GroupJoin
+                var queryGroupJoin = from p in db.Posts
+                                     join b in db.Blogs on p.BlogId equals b.BlogId into r
+                                     select new
+                                     {
+                                         p.Title,
+                                         Posts = r
+                                     };
+                var queryGroupJoin2 = db.Posts.GroupJoin(
+                    db.Blogs,
+                    p => p.BlogId,
+                    b => b.BlogId,
+                    (p, b) => new
+                    {
+                        p.Title,
+                        p.Content,
+                        Posts = p
+                    }
+                    );
+                Console.WriteLine("\nGroupJoin查询语法");
+                foreach (var item in queryGroupJoin)
+                {
+                    if (item.Posts.Count() > 0)
+                    {
+                        Console.WriteLine("{0},{1}", item.Title, item.Posts.ToList()[0].Name);
+                    }
+                }
+                Console.WriteLine("\nGroupJoin方法语法");
+                foreach (var item in queryGroupJoin2)
+                {
+                    if (item.Posts.Blogs!=null)
+                    {
+                        Console.WriteLine("{0},{1}", item.Title, item.Posts.Blogs.Name);
+                    }
                 }
                 #endregion
             }
