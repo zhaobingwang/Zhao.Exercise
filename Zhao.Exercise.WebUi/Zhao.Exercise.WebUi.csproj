@@ -155,7 +155,7 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\CSharpBasisEx\CSharpBasisExAreaRegistration.cs" />
-    <Compile Include="Areas\HTML\HTMLAreaRegistration.cs" />
+    <Compile Include="Areas\FrontDemo\HTMLAreaRegistration.cs" />
     <Compile Include="Areas\Linq\LinqAreaRegistration.cs" />
     <Compile Include="Areas\Tools\Controllers\XmlController.cs" />
     <Compile Include="Areas\Tools\ToolsAreaRegistration.cs" />
@@ -169,7 +169,7 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Areas\CSharpBasisEx\Views\web.config" />
-    <Content Include="Areas\HTML\Views\web.config" />
+    <Content Include="Areas\FrontDemo\Views\web.config" />
     <Content Include="Views\UserInfo\Index.cshtml" />
     <Content Include="Areas\Tools\Views\web.config" />
     <Content Include="Views\UserInfo\Details.cshtml" />
@@ -188,9 +188,9 @@
     <Folder Include="Areas\CSharpBasisEx\Controllers\" />
     <Folder Include="Areas\CSharpBasisEx\Models\" />
     <Folder Include="Areas\CSharpBasisEx\Views\Shared\" />
-    <Folder Include="Areas\HTML\Controllers\" />
-    <Folder Include="Areas\HTML\Models\" />
-    <Folder Include="Areas\HTML\Views\Shared\" />
+    <Folder Include="Areas\FrontDemo\Controllers\" />
+    <Folder Include="Areas\FrontDemo\Models\" />
+    <Folder Include="Areas\FrontDemo\Views\Shared\" />
     <Folder Include="Areas\Linq\Controllers\" />
     <Folder Include="Areas\Linq\Models\" />
     <Folder Include="Areas\Linq\Views\Shared\" />
