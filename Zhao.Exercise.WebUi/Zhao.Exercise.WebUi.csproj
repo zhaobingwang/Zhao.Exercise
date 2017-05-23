@@ -117,17 +117,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\FrontDemo\Content\images\1.jpg" />
+    <Content Include="Areas\FrontDemo\Content\images\1.png" />
+    <Content Include="Areas\FrontDemo\Content\images\2.jpg" />
+    <Content Include="Areas\FrontDemo\Content\images\3.jpg" />
+    <Content Include="Areas\FrontDemo\Content\images\4.jpg" />
+    <Content Include="Areas\FrontDemo\Content\images\example.png" />
+    <Content Include="Areas\FrontDemo\Content\images\example2.png" />
+    <Content Include="Areas\FrontDemo\FullScreen.html" />
+    <Content Include="Areas\FrontDemo\scripts\jquery-2.1.4.js" />
+    <Content Include="Areas\FrontDemo\scripts\pageswitch.js" />
     <Content Include="Areas\Zhao.JQ.Demo\URLHandler.html" />
     <Content Include="Areas\Zhao.JQ.Demo\HtmlPage1.html" />
+    <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\jqGrid\ui.jqgrid-bootstrap-ui.css" />
     <Content Include="Content\jqGrid\ui.jqgrid-bootstrap.css" />
     <Content Include="Content\jqGrid\ui.jqgrid.css" />
     <Content Include="Content\jquery-ui.min.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\jqGrid\jquery-1.11.0.min.js" />
     <Content Include="scripts\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="Areas\FrontDemo\Views\web.config" />
+    <Content Include="Areas\FrontDemo\Views\Demo\FullScreen.cshtml" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
     <Content Include="scripts\jquery-2.1.4.js" />
     <Content Include="scripts\jquery-ui.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Temp\CSS\css.html" />
     <Content Include="Temp\Ex.html" />
     <Content Include="Global.asax" />
@@ -155,7 +176,8 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\CSharpBasisEx\CSharpBasisExAreaRegistration.cs" />
-    <Compile Include="Areas\FrontDemo\HTMLAreaRegistration.cs" />
+    <Compile Include="Areas\FrontDemo\Controllers\DemoController.cs" />
+    <Compile Include="Areas\FrontDemo\FrontDemoAreaRegistration.cs" />
     <Compile Include="Areas\Linq\LinqAreaRegistration.cs" />
     <Compile Include="Areas\Tools\Controllers\XmlController.cs" />
     <Compile Include="Areas\Tools\ToolsAreaRegistration.cs" />
@@ -169,13 +191,16 @@
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
     <Content Include="Areas\CSharpBasisEx\Views\web.config" />
-    <Content Include="Areas\FrontDemo\Views\web.config" />
     <Content Include="Views\UserInfo\Index.cshtml" />
     <Content Include="Areas\Tools\Views\web.config" />
     <Content Include="Views\UserInfo\Details.cshtml" />
     <Content Include="scripts\Zhao.JQ.js" />
     <Content Include="Areas\Tools\Views\Xml\Index.cshtml" />
     <Content Include="Areas\Linq\Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -188,7 +213,6 @@
     <Folder Include="Areas\CSharpBasisEx\Controllers\" />
     <Folder Include="Areas\CSharpBasisEx\Models\" />
     <Folder Include="Areas\CSharpBasisEx\Views\Shared\" />
-    <Folder Include="Areas\FrontDemo\Controllers\" />
     <Folder Include="Areas\FrontDemo\Models\" />
     <Folder Include="Areas\FrontDemo\Views\Shared\" />
     <Folder Include="Areas\Linq\Controllers\" />

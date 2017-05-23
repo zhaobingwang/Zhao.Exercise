@@ -10,18 +10,28 @@ namespace Zhao.Exercise.ExConsole
     {
         static void Main(string[] args)
         {
-            ZhaoEx changeTwoVariable = new ZhaoEx();
-            List<int> list = changeTwoVariable.ChangeTwoVariable(10, 20);
-            Console.WriteLine("源数据：i={0},j={1}",10,20);
-            Console.WriteLine("交换后：i={0},j={1}",list[0],list[1]);
-            Console.WriteLine("-------------------------------------------------------");
-            Person p = new Person("Jack",24,'男');
-            Console.WriteLine(p.SayHi());
+            #region MyRegion
+            //ZhaoEx changeTwoVariable = new ZhaoEx();
+            //List<int> list = changeTwoVariable.ChangeTwoVariable(10, 20);
+            //Console.WriteLine("源数据：i={0},j={1}",10,20);
+            //Console.WriteLine("交换后：i={0},j={1}",list[0],list[1]);
+            //Console.WriteLine("-------------------------------------------------------");
+            //Person p = new Person("Jack",24,'男');
+            //Console.WriteLine(p.SayHi());
+            //Console.ReadKey();
+            //Console.WriteLine("-------------------------------------------------------");
+            //Ticket ticket = new Ticket(150);
+            //ticket.ShowTicketPrice();
+            //Console.WriteLine("-------------------------------------------------------"); 
+            #endregion
+
+            string tempBankNo = "123456789087654598";
+            for (int iBankNo = 4; iBankNo < tempBankNo.Length; iBankNo += 4 + 1)
+            {
+                tempBankNo += tempBankNo.Insert(iBankNo, "-");//灾难代码
+            }
+            Console.WriteLine(tempBankNo);
             Console.ReadKey();
-            Console.WriteLine("-------------------------------------------------------");
-            Ticket ticket = new Ticket(150);
-            ticket.ShowTicketPrice();
-            Console.WriteLine("-------------------------------------------------------");
         }
     }
     class ZhaoEx
