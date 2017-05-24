@@ -143,6 +143,7 @@
     <Content Include="scripts\jqGrid\jquery.jqGrid.min.js" />
     <Content Include="Areas\FrontDemo\Views\web.config" />
     <Content Include="Areas\FrontDemo\Views\Demo\FullScreen.cshtml" />
+    <Content Include="Areas\Lambda\Views\web.config" />
     <None Include="scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="scripts\jquery-1.10.2.js" />
     <Content Include="scripts\jquery-1.10.2.min.js" />
@@ -178,6 +179,7 @@
     <Compile Include="Areas\CSharpBasisEx\CSharpBasisExAreaRegistration.cs" />
     <Compile Include="Areas\FrontDemo\Controllers\DemoController.cs" />
     <Compile Include="Areas\FrontDemo\FrontDemoAreaRegistration.cs" />
+    <Compile Include="Areas\Lambda\LambdaAreaRegistration.cs" />
     <Compile Include="Areas\Linq\LinqAreaRegistration.cs" />
     <Compile Include="Areas\Tools\Controllers\XmlController.cs" />
     <Compile Include="Areas\Tools\ToolsAreaRegistration.cs" />
@@ -215,6 +217,9 @@
     <Folder Include="Areas\CSharpBasisEx\Views\Shared\" />
     <Folder Include="Areas\FrontDemo\Models\" />
     <Folder Include="Areas\FrontDemo\Views\Shared\" />
+    <Folder Include="Areas\Lambda\Controllers\" />
+    <Folder Include="Areas\Lambda\Models\" />
+    <Folder Include="Areas\Lambda\Views\Shared\" />
     <Folder Include="Areas\Linq\Controllers\" />
     <Folder Include="Areas\Linq\Models\" />
     <Folder Include="Areas\Linq\Views\Shared\" />
