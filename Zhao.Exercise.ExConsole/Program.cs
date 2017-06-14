@@ -6,6 +6,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
+using Zhao.Exercise.Common;
 
 namespace Zhao.Exercise.ExConsole
 {
@@ -37,17 +38,52 @@ namespace Zhao.Exercise.ExConsole
             //Console.ReadKey();
 
 
-            TestClass class1 = new TestClass();
-            TestClass class2 = new TestClass();
-            class1.str1 = "abc";
-            class1.int1 = 1;
-            class2 = class1;//(TestClass)Clone2.CloneObject(class1);//(TestClass)class1.Clone();
-            class2.str1 = "123";
-            class2.int1 = 2;
-            Console.WriteLine(Object.ReferenceEquals(class1,class2));
-            Console.WriteLine(class1.str1+class2.str1);
-            Console.WriteLine(class1.int1+class2.int1);
+            #region 深拷贝浅拷贝
+            //TestClass class1 = new TestClass();
+            //TestClass class2 = new TestClass();
+            //class1.str1 = "abc";
+            //class1.int1 = 1;
+            //class2 = class1;//(TestClass)Clone2.CloneObject(class1);//(TestClass)class1.Clone();
+            //class2.str1 = "123";
+            //class2.int1 = 2;
+            //Console.WriteLine(Object.ReferenceEquals(class1, class2));
+            //Console.WriteLine(class1.str1 + class2.str1);
+            //Console.WriteLine(class1.int1 + class2.int1); 
+            #endregion
 
+            Seed seed = new Seed();
+            List<UsersInfo> users1 = seed.initSeed1(10000);
+            List<UsersInfo> users2 = seed.initSeed2(10000);
+            System.Diagnostics.Stopwatch sw = new System.Diagnostics.Stopwatch();
+            sw.Start();
+            foreach (var user1 in users1)
+            {
+                foreach (var user2 in users2)
+                {
+                    if (user1.RealName == user2.RealName)
+                    {
+                        Console.WriteLine(user1.RealName);
+                        continue;
+                    }
+                }
+            }
+            sw.Stop();
+            TimeSpan ts = sw.Elapsed;
+            Console.WriteLine("双重循环耗时：{0} 毫秒", ts.TotalMilliseconds);
+
+            //System.Diagnostics.Stopwatch sw2 = new System.Diagnostics.Stopwatch();
+            //sw2.Start();
+            //List<string> _list1 = new List<string>();
+            //List<string> _list2 = new List<string>();
+            //var list = _list1.Intersect(_list2).ToList();
+            //foreach (var item in list)
+            //{
+            //    Console.WriteLine(item);
+            //}
+
+            //sw2.Stop();
+            //TimeSpan ts2 = sw2.Elapsed;
+            //Console.WriteLine("交集耗时：{0} 毫秒", ts2.TotalMilliseconds);
         }
     }
     class ZhaoEx
